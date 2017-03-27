@@ -1,0 +1,75 @@
+﻿<Window x:Class="TomNet.Platform.App.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TomNet.Platform.App.Views"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Height="320"
+        MinHeight="320"
+        MaxHeight="320"
+        Width="450"
+        MinWidth="450"
+        MaxWidth="450"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Icon="pack://application:,,,/Images/Logo.ico">
+
+    <Border Background="{DynamicResource LoginBackground}"
+            CornerRadius="{DynamicResource ControlCornerRadius}"
+            MouseDown="Border_MouseDown">
+        <Grid ShowGridLines="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="207"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="17"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45"></ColumnDefinition>
+                <ColumnDefinition Width="230"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="18"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row=" 0" Grid.ColumnSpan="5 ">
+                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Right" Visibility="Visible">
+                    <Button x:Name="minBtn" Content="-" FontWeight="Bold" FontSize="19" 
+                            Style="{DynamicResource WindowButtonStyle}" Click="minBtn_Click"/>
+
+                    <Button x:Name="closeBtne" Content="x"  FontWeight="Bold"  FontSize="19" 
+                            Style="{DynamicResource WindowButtonStyle}" Click="closeBtne_Click"/>
+                </StackPanel>
+            </Grid>
+
+            <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                     FontSize="16" BorderThickness="0" controls:TextBoxHelper.Watermark="请输入手机号码"
+                     x:Name="LoginName">13888888888</TextBox>
+
+            <PasswordBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                         FontSize="16" BorderThickness="0" controls:TextBoxHelper.Watermark="请输密码"
+                         x:Name="LoginPwd"  Password="123456"></PasswordBox>
+
+            <Grid Grid.Row=" 1" Grid.Column="3" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="5"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Button Grid.Row="0" Content="用户登陆" Click="LoginClick" Style="{DynamicResource LoginButtonStyle}"/>
+                <Button Grid.Row="2" Content="用户注册" Click="RegisterClick" Style="{DynamicResource RegisterButtonStyle}"/>
+                <Button Grid.Row="4" Content="忘记密码" Click="ForgetClick" Style="{DynamicResource ForgetButtonStyle}"/>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>

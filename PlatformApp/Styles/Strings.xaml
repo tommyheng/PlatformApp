@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TomNet.Platform.App"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--文字-->
+    <sys:String x:Key="BaoBei.Details">查看报备详情</sys:String>
+    <sys:String x:Key="BaoBei.HousesName">楼盘名称</sys:String>
+    <sys:String x:Key="BaoBei.Customer">客户</sys:String>
+    <sys:String x:Key="BaoBei.Broker">经纪人</sys:String>
+    <sys:String x:Key="BaoBei.Commissions">应结佣金</sys:String>
+    <sys:String x:Key="BaoBei.PaidCommissions">已结佣金</sys:String>
+    <sys:String x:Key="BaoBei.OutStandingCommissions">未结佣金</sys:String>
+    <sys:String x:Key="MoneyUnit">元</sys:String>
+
+</ResourceDictionary>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Wpf.XP.39.0.0\build\CefSharp.Wpf.XP.props" Condition="Exists('..\packages\CefSharp.Wpf.XP.39.0.0\build\CefSharp.Wpf.XP.props')" />
+  <Import Project="..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props" Condition="Exists('..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A4D79B0-E7D1-4E1E-9E61-EE4C1F9DB8D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlatformApp</RootNamespace>
+    <AssemblyName>PlatformApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net40\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.1.7.1\lib\net40\MahApps.Metro.IconPacks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net40\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ScrollingTextControl.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\Border.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ColorBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ShapeBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SingleValue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Strings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MenuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddTelephoneHover.png" />
+    <Resource Include="Images\AddTelephoneNormal.png" />
+    <Resource Include="Images\ConfirmHover.png" />
+    <Resource Include="Images\ConfirmNormal.png" />
+    <Resource Include="Images\daiding.png" />
+    <Resource Include="Images\DelTelephoneHover.png" />
+    <Resource Include="Images\DelTelephonNormal.png" />
+    <Resource Include="Images\ershoufang.png" />
+    <Resource Include="Images\fangdaijisuanqi.png" />
+    <Resource Include="Images\huodong.png" />
+    <Resource Include="Images\jiazheng.png" />
+    <Resource Include="Images\jinrong.png" />
+    <Resource Include="Images\laba.png" />
+    <Resource Include="Images\LoginBackground.jpg" />
+    <Resource Include="Images\Login\忘记密码.png" />
+    <Resource Include="Images\Login\忘记密码2.png" />
+    <Resource Include="Images\Login\用户注册.png" />
+    <Resource Include="Images\Login\用户注册2.png" />
+    <Resource Include="Images\Login\用户登录.png" />
+    <Resource Include="Images\Login\用户登录2.png" />
+    <Resource Include="Images\Login\登录背景.png" />
+    <Resource Include="Images\Logo.ico" />
+    <Resource Include="Images\logo1.png" />
+    <Resource Include="Images\lvyou.png" />
+    <Resource Include="Images\man.png" />
+    <Resource Include="Images\menpiao.png" />
+    <Resource Include="Images\woman.png" />
+    <Resource Include="Images\xinfang.png" />
+    <Resource Include="Images\zhuangxiu.png" />
+    <Resource Include="Images\zufang.png" />
+    <Resource Include="Images\个人图标.png" />
+    <Resource Include="Images\住宅图标.png" />
+    <Resource Include="Images\佣金.png" />
+    <Resource Include="Images\其他.png" />
+    <Resource Include="Images\取消.png" />
+    <Resource Include="Images\咨询业务员前面的手机图标.png" />
+    <Resource Include="Images\售楼处.png" />
+    <Resource Include="Images\喇叭.png" />
+    <Resource Include="Images\在售图标.png" />
+    <Resource Include="Images\地址标注图标.png" />
+    <Resource Include="Images\地点图标.png" />
+    <Resource Include="Images\地理位置.png" />
+    <Resource Include="Images\客户与售楼员.png" />
+    <Resource Include="Images\客户与经纪人.png" />
+    <Resource Include="Images\客户图标.png" />
+    <Resource Include="Images\已售图标.png" />
+    <Resource Include="Images\带看单.png" />
+    <Resource Include="Images\成交奖励.png" />
+    <Resource Include="Images\我要报备.png" />
+    <Resource Include="Images\我要报备2.png" />
+    <Resource Include="Images\推荐规则.png" />
+    <Resource Include="Images\搜索条放大镜.png" />
+    <Resource Include="Images\放大镜.png" />
+    <Resource Include="Images\新房图标.png" />
+    <Resource Include="Images\新闻动太图片.jpg" />
+    <Resource Include="Images\查看报备详情按钮.png" />
+    <Resource Include="Images\查看报备详情按钮2.png" />
+    <Resource Include="Images\楼房图标.png" />
+    <Resource Include="Images\楼盘动态.png" />
+    <Resource Include="Images\楼盘卖点.png" />
+    <Resource Include="Images\楼盘参数图标.png" />
+    <Resource Include="Images\添加新客户.png" />
+    <Resource Include="Images\添加新客户2.png" />
+    <Resource Include="Images\确认报备.png" />
+    <Resource Include="Images\确认报备2.png" />
+    <Resource Include="Images\窗口切换.png" />
+    <Resource Include="Images\结算周期.png" />
+    <Resource Include="Images\编辑.png" />
+    <Resource Include="Images\编辑1.png" />
+    <Resource Include="Images\置顶.png" />
+    <Resource Include="Images\详情.png" />
+    <Resource Include="Images\详情1.png" />
+    <Resource Include="Images\进度条灰色横线.png" />
+    <Resource Include="Images\进度条灰色点.png" />
+    <Resource Include="Images\进度条绿色横线.png" />
+    <Resource Include="Images\进度条绿色点.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.2171.2069\build\cef.redist.x64.targets'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Wpf.XP.39.0.0\build\CefSharp.Wpf.XP.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Wpf.XP.39.0.0\build\CefSharp.Wpf.XP.props'))" />
+  </Target>
+  <Import Project="..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets" Condition="Exists('..\packages\cef.redist.x86.3.2171.2069\build\cef.redist.x86.targets')" />
+  <Import Project="..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets" Condition="Exists('..\packages\CefSharp.Common.XP.39.0.0\build\CefSharp.Common.XP.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
