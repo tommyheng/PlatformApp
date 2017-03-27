@@ -74,16 +74,16 @@
                 </Grid>
                 <Grid Grid.Row="2" Background="{DynamicResource HouseAccentColorBrush4}">
                     <WrapPanel>
-                        <Button Style="{DynamicResource NewHouseButtonStyle}" Content="新房"/>
-                        <Button Style="{DynamicResource OldHouseButtonStyle}" Content="二手房"/>
-                        <Button Style="{DynamicResource RentHouseButtonStyle}" Content="租房"/>
-                        <Button Style="{DynamicResource CalcButtonStyle}" Content="房贷计算器"/>
-                        <Button Style="{DynamicResource DecorateButtonStyle}" Content="装修"/>
-                        <Button Style="{DynamicResource HomemakingButtonStyle}" Content="家政"/>
-                        <Button Style="{DynamicResource TravelButtonStyle}"  Content="旅行"/>
-                        <Button Style="{DynamicResource ActivityButtonStyle}" Content="活动"/>
-                        <Button Style="{DynamicResource FinanceButtonStyle}" Content="金融"/>
-                        <Button Style="{DynamicResource TicketButtonStyle}" Content="门票"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource NewHouseButtonStyle}" Content="新房"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource OldHouseButtonStyle}" Content="二手房"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource RentHouseButtonStyle}" Content="租房"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource CalcButtonStyle}" Content="房贷计算器"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource DecorateButtonStyle}" Content="装修"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource HomemakingButtonStyle}" Content="家政"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource TravelButtonStyle}"  Content="旅行"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource ActivityButtonStyle}" Content="活动"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource FinanceButtonStyle}" Content="金融"/>
+                        <Button Click="OpenWebClick" Style="{DynamicResource TicketButtonStyle}" Content="门票"/>
                     </WrapPanel>
                 </Grid>
                 <Grid Grid.Row="3" Height="25"  Background="{DynamicResource HouseAccentColorBrush6}">

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlatformApp;
+using PlatformApp.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +19,7 @@ namespace TomNet.Platform.App.Views
     /// <summary>
     /// MenuView.xaml 的交互逻辑
     /// </summary>
-    public partial class MenuView 
+    public partial class MenuView
     {
         public MenuView()
         {
@@ -48,7 +50,15 @@ namespace TomNet.Platform.App.Views
             double workHeight = SystemParameters.WorkArea.Height;
             double workWidth = SystemParameters.WorkArea.Width;
             this.Top = 80;
-            this.Left = (workWidth - this.Width)-100;
+            this.Left = (workWidth - this.Width) - 100;
+        }
+
+        private void OpenWebClick(object sender, RoutedEventArgs e)
+        {
+            //var os = new GetOSystem();
+            //MessageBox.Show(string.Format("{0} -- {1}", os.OSystemName, os.OSystemVersion));
+            MainWindow win = new MainWindow();
+            win.ShowDialog();
         }
     }
 }
