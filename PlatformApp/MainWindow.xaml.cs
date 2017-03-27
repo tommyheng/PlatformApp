@@ -1,4 +1,5 @@
-﻿using MahApps.Metro;
+﻿using CefSharp;
+using MahApps.Metro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,8 @@ namespace PlatformApp
             var setting = new CefSharp.CefSettings();
             CefSharp.Cef.Initialize(setting, true, false);
             var webView = new CefSharp.Wpf.ChromiumWebBrowser();
-            this.Content = webView;
+            webView.FrameLoadEnd += WebViewLoaded;
+            MainGrid.Children.Insert(0, webView);
             webView.Address = "http://www.zi-han.net/theme/hplus/";
         }
         private void ChangeTheme()
@@ -41,5 +43,14 @@ namespace PlatformApp
             var theme = ThemeManager.DetectAppStyle(Application.Current);
             ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent("CustomAccent"), theme.Item1);
         }
+
+        private void WebViewLoaded(object sender, FrameLoadEndEventArgs e)
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                maskLoading.Visibility = Visibility.Collapsed;
+            }));
+        }
+
     }
 }
