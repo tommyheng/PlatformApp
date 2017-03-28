@@ -33,7 +33,7 @@ namespace PlatformApp
             ChangeTheme();
             var setting = new CefSettings();
             Cef.Initialize(setting, true, false);
-            var webView = new CefSharp.Wpf.ChromiumWebBrowser();
+            var webView = new ChromiumWebBrowser();
             webView.LifeSpanHandler = new LifeSpanHandler();
             webView.FrameLoadEnd += WebViewLoaded;
             MainGrid.Children.Insert(0, webView);
