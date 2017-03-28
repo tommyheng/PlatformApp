@@ -34,7 +34,7 @@ namespace PlatformApp
             var setting = new CefSettings();
             Cef.Initialize(setting, true, false);
             var webView = new ChromiumWebBrowser();
-            webView.LifeSpanHandler = new LifeSpanHandler();
+            //webView.LifeSpanHandler = new LifeSpanHandler();
             webView.FrameLoadEnd += WebViewLoaded;
             MainGrid.Children.Insert(0, webView);
             webView.Address = "http://www.zi-han.net/theme/hplus/";
